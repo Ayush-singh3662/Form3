@@ -51,6 +51,7 @@ function App() {
     if (formData.surveyTopic === 'Technology') {
       if (!formData.technology.language) newErrors.technologyLanguage = 'Language is required';
       if (!formData.technology.experience) newErrors.technologyExperience = 'Experience is required';
+      if(formData.technology.experience < 0) newErrors.technologyExperience = 'Experience must be greater than or equal to 0';
     }
     if (formData.surveyTopic === 'Health') {
       if (!formData.health.frequency) newErrors.healthFrequency = 'Frequency is required';
